@@ -1,0 +1,12 @@
+:root{
+--tc-duration-instant:80ms; /* @kind other */
+--tc-duration-fast:140ms; /* @kind other */
+--tc-duration-base:220ms; /* @kind other */
+--tc-duration-slow:400ms; /* @kind other */
+--tc-duration-scroll:700ms; /* @kind other */
+--tc-ease-standard:cubic-bezier(0.22,0.61,0.36,1); /* @kind other */
+--tc-ease-out:cubic-bezier(0.16,1,0.3,1); /* @kind other */
+--tc-ease-in-out:cubic-bezier(0.65,0,0.35,1); /* @kind other */
+--tc-transition-control:color var(--tc-duration-fast) var(--tc-ease-standard), background-color var(--tc-duration-fast) var(--tc-ease-standard), border-color var(--tc-duration-fast) var(--tc-ease-standard), box-shadow var(--tc-duration-fast) var(--tc-ease-standard), transform var(--tc-duration-fast) var(--tc-ease-standard); /* @kind other */
+--tc-press-scale:0.98; /* @kind other */
+}

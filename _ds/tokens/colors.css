@@ -1,0 +1,50 @@
+:root{
+/* ── Spectrum: sampled from the Threecolts mark, top of the colt's head to the tail ── */
+--tc-spectrum-green:#1CCA8E;
+--tc-spectrum-teal:#22CCCA;
+--tc-spectrum-sky:#43B7ED;
+--tc-spectrum-periwinkle:#8781F8;
+--tc-spectrum-purple:#BE52F8;
+--tc-spectrum-rose:#D17CAD;
+--tc-spectrum-peach:#E19D6F;
+--tc-spectrum-amber:#EBB347;
+
+/* ── Primary brand colour: the flat fill under the app-icon gradient ── */
+--tc-purple:#B45AF9;
+--tc-purple-600:#9B32F0;
+--tc-purple-700:#7C1FC4;
+--tc-purple-100:#F3E4FE;
+--tc-teal-100:#DCF7F6;
+--tc-amber-100:#FBEED6;
+
+/* ── Brand gradients (exact recipe from threecolts-icon-gradient.svg) ── */
+--tc-gradient-mark:radial-gradient(120% 120% at 0% 0%, var(--tc-spectrum-teal) 0%, rgba(34,203,200,0) 100%), radial-gradient(120% 120% at 100% 100%, var(--tc-spectrum-amber) 0%, rgba(235,179,71,0) 100%), var(--tc-purple);
+--tc-gradient-sweep:linear-gradient(90deg, var(--tc-spectrum-green) 0%, var(--tc-spectrum-teal) 16%, var(--tc-spectrum-sky) 32%, var(--tc-spectrum-periwinkle) 52%, var(--tc-spectrum-purple) 70%, var(--tc-spectrum-rose) 85%, var(--tc-spectrum-amber) 100%);
+--tc-gradient-descend:linear-gradient(180deg, var(--tc-spectrum-green) 0%, var(--tc-spectrum-teal) 16%, var(--tc-spectrum-sky) 32%, var(--tc-spectrum-periwinkle) 52%, var(--tc-spectrum-purple) 70%, var(--tc-spectrum-rose) 85%, var(--tc-spectrum-amber) 100%);
+--tc-gradient-hairline:linear-gradient(90deg, var(--tc-spectrum-teal), var(--tc-spectrum-periwinkle), var(--tc-spectrum-purple), var(--tc-spectrum-amber));
+--tc-gradient-wash:linear-gradient(140deg, rgba(34,204,202,0.10) 0%, rgba(135,129,248,0.10) 45%, rgba(235,179,71,0.10) 100%); /* @kind color */
+
+/* ── Neutrals: black ink on a light-grey page ── */
+--tc-black:#000000;
+--tc-ink-900:#111113;
+--tc-ink-800:#1E1E22;
+--tc-ink-700:#3A3A41;
+--tc-ink-600:#55555E;
+--tc-ink-500:#6E6E78;
+--tc-ink-400:#96969F;
+--tc-ink-300:#BCBCC4;
+--tc-ink-200:#DEDEE3;
+--tc-ink-100:#EBEBEE;
+--tc-ink-050:#F4F4F4;
+--tc-white:#FFFFFF;
+
+/* ── Semantic status ── */
+--tc-success:#12A150;
+--tc-success-bg:#E4F6EB;
+--tc-warning:#EBB347;
+--tc-warning-bg:#FBEED6;
+--tc-danger:#DC3B44;
+--tc-danger-bg:#FCE7E8;
+--tc-info:#43B7ED;
+--tc-info-bg:#E1F3FC;
+}
