@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/tokens/typography.css">
+<link rel="stylesheet" href="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/tokens/colors.css">
+<link rel="stylesheet" href="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/tokens/radius.css">
+<link rel="stylesheet" href="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/tokens/elevation.css">
+<link rel="stylesheet" href="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/tokens/motion.css">
+<link rel="stylesheet" href="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/tokens/semantic.css">
+<link rel="stylesheet" href="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/tokens/base.css">
+<link rel="stylesheet" href="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/styles.css">
+<script src="_ds/threecolts-design-system-802ae10a-1d2f-410a-95f0-d1960527db4d/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--tc-ink-050); }
+  a { color: var(--tc-ink-900); text-decoration: none; }
+  a:hover { color: var(--tc-purple-600); }
+  @keyframes tcBarIn { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+</style>
+</helmet>
+<div style="min-height: 100vh; background: var(--tc-ink-050); font: var(--tc-text-body); color: var(--text-body);">
+
+  <header style="position: sticky; top: 0; z-index: 20; height: 72px; display: flex; align-items: center; gap: 20px; padding: 0 32px; background: rgba(255,255,255,0.82); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle);">
+    <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Logo" variant="logo-dark" base="assets/logos" height="26" hint-size="130px,26px"></x-import>
+    <span style="width: 1px; height: 24px; background: var(--tc-ink-200);"></span>
+    <span style="font: var(--tc-text-label); color: var(--text-strong);">Margin Pro 1P ·Aug Revenue Close</span>
+    <span style="flex: 1;"></span>
+    <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Badge" tone="success" hint-size="120px,24px">Books closed</x-import>
+  </header>
+
+  <main style="max-width: 1240px; margin: 0 auto; padding: 44px 24px 88px; display: grid; gap: 28px;">
+
+    <section style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div style="display: grid; gap: 10px;">
+        <span style="font: var(--tc-text-overline); text-transform: uppercase; letter-spacing: var(--tc-tracking-overline); color: var(--text-muted);">Revenue summary</span>
+        <h1 style="margin: 0; font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 52px; line-height: 1.05; letter-spacing: -0.035em; color: var(--text-strong);">{{ headline }}</h1>
+        <p style="margin: 0; max-width: 62ch; font: var(--tc-text-body); color: var(--text-muted); text-wrap: pretty;">Net revenue recognized across Amazon, Target and Walmart. Fourteen dispute types billed; four credit memos issued. Closed Aug 26, 2026.</p>
+      </div>
+      <div style="display: grid; gap: 6px; justify-items: end;">
+        <span style="font: var(--tc-text-overline); text-transform: uppercase; letter-spacing: var(--tc-tracking-overline); color: var(--text-faint);">Entity</span>
+        <span style="font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 26px; letter-spacing: -0.02em; color: var(--text-strong);">{{ client }}</span>
+        <span style="font: var(--tc-text-body-sm); color: var(--text-muted);">Period {{ period }}</span>
+      </div>
+    </section>
+
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+      <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Card" padding="sm" gradient-edge="{{ true }}" hint-size="100%,148px">
+        <div style="display: grid; gap: 8px; padding-top: 6px;">
+          <span style="font: var(--tc-text-overline); text-transform: uppercase; letter-spacing: var(--tc-tracking-overline); color: var(--text-muted);">Total revenue</span>
+          <span style="font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 34px; letter-spacing: -0.03em; font-variant-numeric: tabular-nums lining-nums; color: var(--text-strong);">$585,490.29</span>
+          <span style="font: var(--tc-text-body-sm); color: var(--text-muted);">Gross billed amount, all marketplaces</span>
+        </div>
+      </x-import>
+      <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Card" padding="sm" hint-size="100%,148px">
+        <div style="display: grid; gap: 8px; padding-top: 6px;">
+          <span style="font: var(--tc-text-overline); text-transform: uppercase; letter-spacing: var(--tc-tracking-overline); color: var(--text-muted);">Credit memo impact</span>
+          <span style="font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 34px; letter-spacing: -0.03em; font-variant-numeric: tabular-nums lining-nums; color: var(--tc-danger);">($17,885.32)</span>
+          <span style="font: var(--tc-text-body-sm); color: var(--text-muted);">4 memos · 3.05% of gross</span>
+        </div>
+      </x-import>
+      <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Card" padding="sm" hint-size="100%,148px">
+        <div style="display: grid; gap: 8px; padding-top: 6px;">
+          <span style="font: var(--tc-text-overline); text-transform: uppercase; letter-spacing: var(--tc-tracking-overline); color: var(--text-muted);">Net revenue</span>
+          <span style="font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 34px; letter-spacing: -0.03em; font-variant-numeric: tabular-nums lining-nums; color: var(--text-strong);">$567,604.97</span>
+          <span style="font: var(--tc-text-body-sm); color: var(--tc-success);">Recognized for August 2026</span>
+        </div>
+      </x-import>
+      <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Card" padding="sm" hint-size="100%,148px">
+        <div style="display: grid; gap: 8px; padding-top: 6px;">
+          <span style="font: var(--tc-text-overline); text-transform: uppercase; letter-spacing: var(--tc-tracking-overline); color: var(--text-muted);">Largest driver</span>
+          <span style="font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 34px; letter-spacing: -0.03em; font-variant-numeric: tabular-nums lining-nums; color: var(--text-strong);">$169,606.22</span>
+          <span style="font: var(--tc-text-body-sm); color: var(--text-muted);">Overage, Amazon · 29.0% of gross</span>
+        </div>
+      </x-import>
+    </section>
+
+    <section style="display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(340px, 1fr); gap: 24px; align-items: start;">
+
+      <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Card" padding="none" hint-size="100%,760px">
+        <div style="display: grid; gap: 18px; padding: 26px 26px 8px;">
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+            <div style="display: grid; gap: 4px;">
+              <h2 style="margin: 0; font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 22px; letter-spacing: -0.02em; color: var(--text-strong);">Billed amount by dispute type</h2>
+              <span style="font: var(--tc-text-body-sm); color: var(--text-muted);">{{ rowCountLabel }}</span>
+            </div>
+            <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.SegmentedControl" options="{{ filterOptions }}" value="{{ filter }}" on-change="{{ setFilter }}" size="sm" hint-size="300px,34px"></x-import>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font: var(--tc-text-body-sm); color: var(--text-faint);">Sort</span>
+            <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.SegmentedControl" options="{{ sortOptions }}" value="{{ sort }}" on-change="{{ setSort }}" size="sm" hint-size="260px,34px"></x-import>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: minmax(0, 1.4fr) 96px minmax(120px, 1fr) 150px; gap: 16px; padding: 12px 26px; border-bottom: 1px solid var(--border-subtle); font: var(--tc-text-overline); text-transform: uppercase; letter-spacing: var(--tc-tracking-overline); color: var(--text-faint);">
+          <span>Dispute type</span>
+          <span>Marketplace</span>
+          <span>Share of gross</span>
+          <span style="text-align: right;">Billed amount</span>
+        </div>
+
+        <sc-for list="{{ rows }}" as="row" hint-placeholder-count="14">
+          <div style="display: grid; grid-template-columns: minmax(0, 1.4fr) 96px minmax(120px, 1fr) 150px; gap: 16px; align-items: center; padding: {{ row.pad }} 26px; border-bottom: 1px solid var(--tc-ink-100); transition: background var(--tc-duration-fast) var(--tc-ease-standard);" style-hover="background: var(--tc-ink-050);">
+            <span style="display: flex; align-items: center; gap: 10px; min-width: 0;">
+              <span style="width: 6px; height: 6px; border-radius: 999px; flex: none; background: {{ row.dot }};"></span>
+              <span style="font: var(--tc-text-label); color: var(--text-strong); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ row.type }}</span>
+            </span>
+            <span style="font: var(--tc-text-body-sm); color: var(--text-muted);">{{ row.mp }}</span>
+            <span style="display: flex; align-items: center; gap: 10px;">
+              <span style="flex: 1; height: 6px; border-radius: 999px; background: var(--tc-ink-100); overflow: hidden;">
+                <span style="display: block; height: 100%; border-radius: 999px; transform-origin: left center; animation: tcBarIn 520ms var(--tc-ease-out) both; width: {{ row.barW }}; background: {{ row.bar }};"></span>
+              </span>
+              <span style="width: 48px; text-align: right; font: var(--tc-text-body-sm); font-variant-numeric: tabular-nums; color: var(--text-faint);">{{ row.pct }}</span>
+            </span>
+            <span style="text-align: right; font: var(--tc-text-label); font-variant-numeric: tabular-nums lining-nums; color: {{ row.amtColor }};">{{ row.amt }}</span>
+          </div>
+        </sc-for>
+
+        <div style="display: grid; grid-template-columns: minmax(0, 1.4fr) 96px minmax(120px, 1fr) 150px; gap: 16px; align-items: center; padding: 20px 26px; background: var(--tc-ink-050);">
+          <span style="font: var(--tc-text-label); color: var(--text-strong);">{{ totalLabel }}</span>
+          <span></span>
+          <span></span>
+          <span style="text-align: right; font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 20px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums lining-nums; color: var(--text-strong);">{{ filteredTotal }}</span>
+        </div>
+      </x-import>
+
+      <div style="display: grid; gap: 24px;">
+
+        <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Card" padding="sm" hint-size="100%,260px">
+          <div style="display: grid; gap: 18px;">
+            <h2 style="margin: 0; font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 18px; letter-spacing: -0.02em; color: var(--text-strong);">Gross to net</h2>
+            <div style="display: grid; gap: 14px;">
+              <div style="display: grid; gap: 6px;">
+                <div style="display: flex; justify-content: space-between; font: var(--tc-text-body-sm); color: var(--text-muted);"><span>Total revenue</span><span style="font-variant-numeric: tabular-nums; color: var(--text-strong);">$585,490.29</span></div>
+                <span style="display: block; height: 10px; border-radius: 999px; background: var(--tc-ink-900);"></span>
+              </div>
+              <div style="display: grid; gap: 6px;">
+                <div style="display: flex; justify-content: space-between; font: var(--tc-text-body-sm); color: var(--text-muted);"><span>Less credit memos</span><span style="font-variant-numeric: tabular-nums; color: var(--tc-danger);">($17,885.32)</span></div>
+                <span style="display: block; height: 10px; width: 3.05%; min-width: 8px; border-radius: 999px; background: var(--tc-danger);"></span>
+              </div>
+              <div style="display: grid; gap: 6px;">
+                <div style="display: flex; justify-content: space-between; font: var(--tc-text-body-sm); color: var(--text-muted);"><span>Net revenue</span><span style="font-variant-numeric: tabular-nums; color: var(--text-strong);">$567,604.97</span></div>
+                <span style="display: block; height: 10px; width: 96.95%; border-radius: 999px; background: var(--tc-gradient-sweep);"></span>
+              </div>
+            </div>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Card" padding="sm" hint-size="100%,300px">
+          <div style="display: grid; gap: 18px;">
+            <h2 style="margin: 0; font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 18px; letter-spacing: -0.02em; color: var(--text-strong);">Net by marketplace</h2>
+            <span style="display: flex; height: 12px; border-radius: 999px; overflow: hidden; background: var(--tc-ink-100);">
+              <span style="width: 97.5%; background: var(--tc-ink-900);"></span>
+              <span style="width: 2.1%; background: var(--tc-spectrum-purple);"></span>
+              <span style="width: 0.4%; background: var(--tc-spectrum-teal);"></span>
+            </span>
+            <div style="display: grid; gap: 12px;">
+              <sc-for list="{{ marketplaces }}" as="m" hint-placeholder-count="3">
+                <div style="display: grid; grid-template-columns: 10px 1fr auto auto; gap: 10px; align-items: center;">
+                  <span style="width: 10px; height: 10px; border-radius: 3px; background: {{ m.color }};"></span>
+                  <span style="font: var(--tc-text-label); color: var(--text-strong);">{{ m.name }}</span>
+                  <span style="font: var(--tc-text-body-sm); font-variant-numeric: tabular-nums; color: var(--text-faint); min-width: 48px; text-align: right;">{{ m.pct }}</span>
+                  <span style="font: var(--tc-text-label); font-variant-numeric: tabular-nums; color: var(--text-strong); min-width: 104px; text-align: right;">{{ m.amt }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <p style="margin: 0; font: var(--tc-text-body-sm); color: var(--text-muted);">Target is net of the $3,602.88 memo on PO 0284-4949137-3895.</p>
+          </div>
+        </x-import>
+
+        <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Card" padding="sm" hint-size="100%,440px">
+          <div style="display: grid; gap: 16px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+              <h2 style="margin: 0; font-family: var(--tc-font-display); font-weight: var(--tc-weight-extrabold); font-size: 18px; letter-spacing: -0.02em; color: var(--text-strong);">Credit memo breakdown</h2>
+              <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Badge" tone="warning" size="sm" hint-size="76px,20px">4 memos</x-import>
+            </div>
+            <sc-if value="{{ showMemoNotes }}" hint-placeholder-val="{{ true }}">
+              <div style="display: grid; gap: 14px;">
+                <sc-for list="{{ memos }}" as="memo" hint-placeholder-count="4">
+                  <div style="display: grid; gap: 6px; padding: 14px 16px; border-radius: var(--tc-radius-lg); background: var(--tc-ink-050); border: 1px solid var(--tc-ink-100);">
+                    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+                      <span style="font: var(--tc-text-label); color: var(--text-strong);">{{ memo.title }}</span>
+                      <span style="font: var(--tc-text-label); font-variant-numeric: tabular-nums; color: var(--tc-danger); white-space: nowrap;">{{ memo.amt }}</span>
+                    </div>
+                    <p style="margin: 0; font: var(--tc-text-body-sm); font-size: 13px; line-height: 1.5; color: var(--text-muted); text-wrap: pretty;">{{ memo.note }}</p>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 4px; border-top: 1px solid var(--border-subtle);">
+              <span style="padding-top: 12px; font: var(--tc-text-label); color: var(--text-strong);">Total credit memos</span>
+              <span style="padding-top: 12px; font: var(--tc-text-label); font-variant-numeric: tabular-nums; color: var(--tc-danger);">($17,885.32)</span>
+            </div>
+          </div>
+        </x-import>
+
+      </div>
+    </section>
+
+    <section style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 26px; border-radius: var(--tc-radius-card); background: var(--tc-ink-900); color: rgba(255,255,255,0.72); flex-wrap: wrap;">
+      <span style="font: var(--tc-text-body-sm); max-width: 78ch; text-wrap: pretty;">Memo detail is presented at the adjustment level and reconciles to the four CM lines in the dispute table. Supporting documentation for the $68.16 goodwill credit is unavailable — Amazon's internal payment data is not accessible.</span>
+      <x-import component-from-global-scope="ThreecoltsDesignSystem_802ae1.Button" variant="outlineInverse" size="sm" href="https://docs.google.com/spreadsheets/d/1YpGeMZpyCjXCQZLWBg1g5-8c7dvqP8kl/edit?usp=sharing&amp;ouid=100704727131758743787&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" hint-size="150px,36px">View Claim Ledger</x-import>
+    </section>
+
+  </main>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;client&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Dimetyd&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;period&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;August 2026&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;comfortable&quot;,&quot;compact&quot;],&quot;default&quot;:&quot;comfortable&quot;,&quot;tsType&quot;:&quot;\&quot;comfortable\&quot; | \&quot;compact\&quot;&quot;},&quot;barTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;gradient&quot;,&quot;ink&quot;],&quot;default&quot;:&quot;gradient&quot;,&quot;tsType&quot;:&quot;\&quot;gradient\&quot; | \&quot;ink\&quot;&quot;,&quot;section&quot;:&quot;Chart&quot;},&quot;showMemoNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Chart&quot;}}">
+const DATA = [
+  { type: 'Active Receiving Claim', mp: 'Amazon', amt: 55309.50 },
+  { type: 'CM IS', mp: 'Amazon', amt: -11100.68 },
+  { type: 'CM Overage', mp: 'Amazon', amt: -2606.04 },
+  { type: 'CM Past Due Invoice', mp: 'Amazon', amt: -575.72 },
+  { type: 'CM Target', mp: 'Target', amt: -3602.88 },
+  { type: 'FinOps', mp: 'Amazon', amt: 46268.00 },
+  { type: 'Itemized SC', mp: 'Amazon', amt: 111660.69 },
+  { type: 'Overage', mp: 'Amazon', amt: 169606.22 },
+  { type: 'Overbilling', mp: 'Amazon', amt: 208.06 },
+  { type: 'Past Due Invoice', mp: 'Amazon', amt: 65549.16 },
+  { type: 'Price Claim', mp: 'Amazon', amt: 110173.19 },
+  { type: 'Returns', mp: 'Amazon', amt: 8832.77 },
+  { type: 'Target', mp: 'Target', amt: 6103.97 },
+  { type: 'Walmart', mp: 'Walmart', amt: 11778.73 },
+];
+
+const MEMOS = [
+  { title: 'Amazon clawback', amt: -13706.72, note: 'Amazon clawed back this amount from the customer.' },
+  { title: 'Target PO 0284-4949137-3895', amt: -3602.88, note: 'Fee adjustment. The $18,014.40 dispute resulted in no net recovery, so a credit was issued for 20% of the disputed amount.' },
+  { title: 'Discount & unsubstantiated remittances', amt: -507.56, note: 'Credit issued for the 2% discount adjustment and removal of remittances for which recovery could not be substantiated through our efforts.' },
+  { title: 'Goodwill adjustment', amt: -68.16, note: 'Credit issued for a customer dispute. Supporting documentation is unavailable due to lack of access to Amazon\u2019s internal payment data; credited as a goodwill adjustment.' },
+];
+
+const GROSS = 585490.29;
+
+class Component extends DCLogic {
+  state = { filter: 'all', sort: 'amount' };
+
+  money(n) {
+    const s = Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return n < 0 ? '($' + s + ')' : '$' + s;
+  }
+
+  renderVals() {
+    const filter = this.state.filter;
+    const sort = this.state.sort;
+    const density = this.props.density ?? 'comfortable';
+    const barTone = this.props.barTone ?? 'gradient';
+    const pad = density === 'compact' ? '11px' : '16px';
+
+    let rows = DATA.filter((r) => filter === 'all' || (filter === 'recoveries' ? r.amt > 0 : r.amt < 0));
+    rows = rows.slice().sort((a, b) => {
+      if (sort === 'name') return a.type.localeCompare(b.type);
+      if (sort === 'marketplace') return a.mp.localeCompare(b.mp) || Math.abs(b.amt) - Math.abs(a.amt);
+      return Math.abs(b.amt) - Math.abs(a.amt);
+    });
+
+    const max = rows.reduce((m, r) => Math.max(m, Math.abs(r.amt)), 1);
+    const total = rows.reduce((s, r) => s + r.amt, 0);
+    const recoveryBar = barTone === 'ink' ? 'var(--tc-ink-900)' : 'var(--tc-gradient-sweep)';
+
+    const netAmazon = 553325.15, netWalmart = 11778.73, netTarget = 2501.09, net = 567604.97;
+
+    return {
+      client: this.props.client ?? 'Dimetyd',
+      period: this.props.period ?? 'August 2026',
+      headline: (this.props.period ?? 'August 2026') + ' books are closed.',
+      showMemoNotes: this.props.showMemoNotes ?? true,
+      filter, sort,
+      setFilter: (v) => this.setState({ filter: v }),
+      setSort: (v) => this.setState({ sort: v }),
+      filterOptions: [
+        { value: 'all', label: 'All 14' },
+        { value: 'recoveries', label: 'Recoveries 10' },
+        { value: 'credits', label: 'Credit memos 4' },
+      ],
+      sortOptions: [
+        { value: 'amount', label: 'Amount' },
+        { value: 'name', label: 'A\u2013Z' },
+        { value: 'marketplace', label: 'Marketplace' },
+      ],
+      rowCountLabel: rows.length + ' of 14 lines · ' + (filter === 'credits' ? 'credit memos only' : filter === 'recoveries' ? 'positive recoveries only' : 'recoveries and credit memos'),
+      totalLabel: filter === 'all' ? 'Grand total (net revenue)' : filter === 'recoveries' ? 'Subtotal, recoveries' : 'Subtotal, credit memos',
+      filteredTotal: this.money(total),
+      rows: rows.map((r) => ({
+        type: r.type,
+        mp: r.mp,
+        amt: this.money(r.amt),
+        amtColor: r.amt < 0 ? 'var(--tc-danger)' : 'var(--text-strong)',
+        pct: (Math.abs(r.amt) / GROSS * 100).toFixed(1) + '%',
+        barW: Math.max(2, Math.abs(r.amt) / max * 100) + '%',
+        bar: r.amt < 0 ? 'var(--tc-danger)' : recoveryBar,
+        dot: r.amt < 0 ? 'var(--tc-danger)' : 'var(--tc-ink-300)',
+        pad,
+      })),
+      marketplaces: [
+        { name: 'Amazon', amt: this.money(netAmazon), pct: (netAmazon / net * 100).toFixed(1) + '%', color: 'var(--tc-ink-900)' },
+        { name: 'Walmart', amt: this.money(netWalmart), pct: (netWalmart / net * 100).toFixed(1) + '%', color: 'var(--tc-spectrum-purple)' },
+        { name: 'Target', amt: this.money(netTarget), pct: (netTarget / net * 100).toFixed(1) + '%', color: 'var(--tc-spectrum-teal)' },
+      ],
+      memos: MEMOS.map((m) => ({ title: m.title, note: m.note, amt: this.money(m.amt) })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
